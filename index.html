@@ -9,41 +9,69 @@
 </head>
 
 <body>
+
     <div class="conteiner">
+
         <h1>Cadastro de produtos</h1>
 
-        <!--Formulário de entrada-->
+        <!-- Formulário de entrada -->
         <form id="produto-form">
 
             <div class="form-group">
                 <label for="nome">Nome do produto:</label>
-                <input type="text" id="nome" placeholder="Ex. notebook" required>
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Ex. notebook"
+                    required
+                >
             </div>
 
             <div class="form-group">
-                <label for="nome">Preço (R$):</label>
-                <input type="number" id="preco" step="0.01" placeholder=" Ex. 3500,00" required>
+                <label for="preco">Preço (R$):</label>
+                <input
+                    type="number"
+                    id="preco"
+                    step="0.01"
+                    placeholder="Ex. 3500,00"
+                    required
+                >
             </div>
 
             <div class="form-group">
-                <label for="nome">Quantidade</label>
-                <input type="number" id="quantidade" placeholder="Ex. 5" required>
+                <label for="quantidade">Quantidade:</label>
+                <input
+                    type="number"
+                    id="quantidade"
+                    placeholder="Ex. 5"
+                    required
+                >
             </div>
 
-            <button type="submet" class="btn-primary">Adicionar produto</button>
+            <button type="submit" class="btn-primary">
+                Adicionar produto
+            </button>
 
         </form>
 
-        <!-- Cabeçalho de ações e resumo -->
 
+        <!-- Cabeçalho de ações e resumo -->
         <div class="resumo-conteiner">
-            <h3 id="total-estoque"> Total em estoque:R$0,00</h3>
-            <button id="limpar-tabela" class="btn-danger">Limpar tudo</button>
+
+            <h3 id="total-estoque">
+                Total em estoque: R$ 0,00
+            </h3>
+
+            <button id="limpar-tabela" class="btn-danger">
+                Limpar tudo
+            </button>
+
         </div>
 
-        <!-- Tabela de exibição -->
 
+        <!-- Tabela de exibição -->
         <table id="tabela-produtos">
+
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -53,16 +81,20 @@
                     <th>Ações</th>
                 </tr>
             </thead>
-            <tbody>
-                <!-- As linhas da tabela serão inseridas pelo JS -->
-            </tbody>
-            <tfoot>
 
+            <tbody>
+                <!-- As linhas serão inseridas pelo JavaScript -->
+            </tbody>
+
+            <tfoot>
             </tfoot>
+
         </table>
+
     </div>
 
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
+
 </body>
 
 </html>

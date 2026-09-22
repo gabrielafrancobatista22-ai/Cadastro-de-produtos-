@@ -22,6 +22,10 @@ h1{
     margin-bottom: 20px;
     color: #023042;
 }
+
+#texto-titulo{
+    color: white;
+}
 form{
     display: flex;
     flex-direction: column;

@@ -5,13 +5,13 @@
 }
 body{
     font-family: Arial, sans-serif;
-    background-color: #ee058d;
+    background-color: #f19ce6;
     color: #333;
     padding: 20px;
 }
 .conteiner{
     max-width: 650px;
-    background-color: #9c0651;
+    background-color: #f5dce8;
     margin: 30px auto;
     padding: 25px;
     border-radius: 8px;
@@ -24,7 +24,7 @@ h1{
 }
 
 #texto-titulo{
-    color: white;
+    color: rgb(0, 0, 0);
 }
 form{
     display: flex;
@@ -61,20 +61,20 @@ button{
     transition: background-color 0,2s;
 }
 .btn-primary{
-    background-color: #eb2588;
+    background-color: #d6267e;
     color: white;
 
 }
 .btn-primary:hover{
-    background-color: #d81d7a;
+    background-color: #f7027c;
 
 }
 .btn-danger{
-    background-color: #dc2663;
+    background-color: #cc245c;
     color: white;
 }
 .btn-danger:hover{
-    background-color: #b91c50;
+    background-color: #ff0256;
     
 }
 .resumo-conteiner{
@@ -83,12 +83,12 @@ button{
     align-items: center;
     margin-bottom: 15px;
     padding-top: 10px;
-    border-top: 2px solid#e2e8f0;
+    border-top: 2px solid#000000;
 
 }
 #total-estoque{
     font-size: 18px;
-    color: #f0068e;
+    color: #030303;
 }
 table{
     width:100%;

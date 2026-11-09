@@ -1,121 +1,216 @@
-*{
+/* Configurações gerais */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     font-family: Arial, sans-serif;
-    background-color: #f19ce6;
+    background-color: #e5fae0;
     color: #333;
     padding: 20px;
 }
-.conteiner{
+
+/* Container principal */
+.conteiner {
     max-width: 650px;
     background-color: #f5dce8;
     margin: 30px auto;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0 0,0);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-h1{
+
+/* Título */
+h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #023042;
 }
 
-#texto-titulo{
+#texto-titulo {
     color: rgb(0, 0, 0);
 }
-form{
+
+/* Formulário */
+form {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-bottom: 25px;
 }
-.form-group{
+
+.form-group {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-label{
+
+label {
     font-weight: bold;
     font-size: 14px;
 }
-input{
+
+/* Campos de entrada */
+input {
     padding: 10px;
-    border: 1px solid#ccc;
+    border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
 }
-input:focus{
+
+input:focus {
     outline: none;
-    border-color: #db075f;
+    border-color: #50a54d;
 }
-button{
+
+/* Botões */
+button {
     padding: 10px 15px;
     font-size: 15px;
     font-weight: bold;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0,2s;
+    transition: background-color 0.2s;
 }
-.btn-primary{
-    background-color: #d6267e;
-    color: white;
 
-}
-.btn-primary:hover{
-    background-color: #f7027c;
-
-}
-.btn-danger{
-    background-color: #cc245c;
+.btn-primary {
+    background-color: #458658;
     color: white;
 }
-.btn-danger:hover{
-    background-color: #ff0256;
-    
+
+.btn-primary:hover {
+    background-color: #29572f;
 }
-.resumo-conteiner{
+
+.btn-danger {
+    background-color: #215224;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #17800d;
+}
+
+/* Resumo do estoque */
+.resumo-conteiner {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
     padding-top: 10px;
-    border-top: 2px solid#000000;
-
+    border-top: 2px solid #000000;
 }
-#total-estoque{
+
+#total-estoque {
     font-size: 18px;
     color: #030303;
 }
-table{
-    width:100%;
-    border-collapse: collapse;
-    margin-top:10px;
 
+/* Campo de busca */
+.campo-busca {
+    margin-bottom: 15px;
 }
-th,td{
-     border: px solid#cbd5e1;
-     padding: 10px;
-     text-align: center;
-    
+
+#campo-busca {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #50a54d;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
 }
-th{
-    background-color: #eb2571;
+
+#campo-busca:focus {
+    outline: none;
+    border: 2px solid #458658;
+    box-shadow: 0 0 5px rgba(69, 134, 88, 0.3);
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    border: 1px solid #cbd5e1;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #366829;
     color: white;
 }
-tbody tr:nth-child(even){
-    background-color: #f8fafc;
 
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
 }
-.btn-remover{
+
+/* Botão editar */
+.btn-editar {
+    background-color: #458658;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    margin: 2px;
+}
+
+.btn-editar:hover {
+    background-color: #29572f;
+}
+
+/* Botão remover */
+.btn-remover {
     background-color: #ef4444;
     color: white;
     padding: 5px 10px;
     font-size: 12px;
+    margin: 2px;
 }
-.btn-remover:hover{
+
+.btn-remover:hover {
     background-color: #dc2626;
+}
+
+/* Mensagens da tabela */
+.mensagem-vazia {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+
+    .conteiner {
+        padding: 15px;
+    }
+
+    .resumo-conteiner {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+
+    .btn-editar,
+    .btn-remover {
+        padding: 5px;
+        font-size: 11px;
+    }
 }

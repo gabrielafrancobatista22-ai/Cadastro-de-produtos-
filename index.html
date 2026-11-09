@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Sistema de Estoque-Gabriela Franco</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -33,6 +35,7 @@
                     type="number"
                     id="preco"
                     step="0.01"
+                    min="0.01"
                     placeholder="Ex. 3500,00"
                     required
                 >
@@ -43,6 +46,8 @@
                 <input
                     type="number"
                     id="quantidade"
+                    min="1"
+                    step="1"
                     placeholder="Ex. 5"
                     required
                 >
@@ -54,8 +59,7 @@
 
         </form>
 
-
-        <!-- Cabeçalho de ações e resumo -->
+        <!-- Resumo do estoque -->
         <div class="resumo-conteiner">
 
             <h3 id="total-estoque">
@@ -68,8 +72,22 @@
 
         </div>
 
+        <!-- Campo de pesquisa V4 -->
+        <div class="form-group campo-busca">
 
-        <!-- Tabela de exibição -->
+            <label for="campo-busca">
+                Pesquisar produto:
+            </label>
+
+            <input
+                type="text"
+                id="campo-busca"
+                placeholder="Digite o nome do produto..."
+            >
+
+        </div>
+
+        <!-- Tabela de produtos -->
         <table id="tabela-produtos">
 
             <thead>
@@ -83,7 +101,7 @@
             </thead>
 
             <tbody>
-                <!-- As linhas serão inseridas pelo JavaScript -->
+                <!-- Produtos inseridos pelo JavaScript -->
             </tbody>
 
             <tfoot>

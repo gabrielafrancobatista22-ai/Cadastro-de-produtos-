@@ -1,4 +1,4 @@
-/* Configurações gerais */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,33 +7,30 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #e5fae0;
-    color: #333;
+    background-color: #e5f0e7;
+    color: #26382b;
     padding: 20px;
 }
 
-/* Container principal */
 .conteiner {
-    max-width: 650px;
-    background-color: #f5dce8;
+    max-width: 750px;
+    background-color: #f4f8f3;
     margin: 30px auto;
     padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(35, 65, 43, 0.15);
 }
 
-/* Título */
 h1 {
     text-align: center;
-    margin-bottom: 20px;
-    color: #023042;
+    margin-bottom: 25px;
+    color: #315b3b;
 }
 
 #texto-titulo {
-    color: rgb(0, 0, 0);
+    color: #315b3b;
 }
 
-/* Formulário */
 form {
     display: flex;
     flex-direction: column;
@@ -44,92 +41,86 @@ form {
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
 }
 
 label {
     font-weight: bold;
     font-size: 14px;
+    color: #365640;
 }
 
-/* Campos de entrada */
 input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #b8cdbb;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #fff;
 }
 
 input:focus {
     outline: none;
-    border-color: #50a54d;
+    border-color: #568363;
+    box-shadow: 0 0 5px rgba(86, 131, 99, 0.25);
 }
 
-/* Botões */
 button {
-    padding: 10px 15px;
-    font-size: 15px;
+    padding: 11px 15px;
+    font-size: 14px;
     font-weight: bold;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: 0.2s;
 }
 
 .btn-primary {
-    background-color: #458658;
+    background-color: #568363;
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #29572f;
+    background-color: #3d6849;
 }
 
 .btn-danger {
-    background-color: #215224;
+    background-color: #78947b;
     color: white;
 }
 
 .btn-danger:hover {
-    background-color: #17800d;
+    background-color: #5c795f;
 }
 
-/* Resumo do estoque */
 .resumo-conteiner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
-    padding-top: 10px;
-    border-top: 2px solid #000000;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #c5d8c8;
 }
 
 #total-estoque {
     font-size: 18px;
-    color: #030303;
+    color: #315b3b;
 }
 
-/* Campo de busca */
 .campo-busca {
     margin-bottom: 15px;
 }
 
 #campo-busca {
-    width: 100%;
     padding: 12px;
-    border: 1px solid #50a54d;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: white;
 }
 
-#campo-busca:focus {
-    outline: none;
-    border: 2px solid #458658;
-    box-shadow: 0 0 5px rgba(69, 134, 88, 0.3);
+.tabela-responsiva {
+    width: 100%;
+    overflow-x: auto;
 }
 
-/* Tabela */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -138,65 +129,123 @@ table {
 
 th,
 td {
-    border: 1px solid #cbd5e1;
+    border: 1px solid #cbd9cd;
     padding: 10px;
     text-align: center;
 }
 
 th {
-    background-color: #366829;
+    background-color: #496e50;
     color: white;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f8fafc;
+    background-color: #eaf2eb;
 }
 
-/* Botão editar */
+tbody tr:nth-child(odd) {
+    background-color: #f8faf8;
+}
+
 .btn-editar {
-    background-color: #458658;
+    background-color: #72977a;
     color: white;
-    padding: 5px 10px;
+    padding: 7px 10px;
     font-size: 12px;
-    margin: 2px;
+    margin: 3px;
 }
 
 .btn-editar:hover {
-    background-color: #29572f;
+    background-color: #52765a;
 }
 
-/* Botão remover */
 .btn-remover {
-    background-color: #ef4444;
+    background-color: #a66d6d;
     color: white;
-    padding: 5px 10px;
+    padding: 7px 10px;
     font-size: 12px;
-    margin: 2px;
+    margin: 3px;
 }
 
 .btn-remover:hover {
-    background-color: #dc2626;
+    background-color: #875252;
 }
 
-/* Mensagens da tabela */
 .mensagem-vazia {
     text-align: center;
     padding: 20px;
-    color: #777;
+    color: #718274;
     font-weight: bold;
 }
 
-/* Responsividade */
+.mensagem-status {
+    display: none;
+    width: 100%;
+    padding: 13px 16px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mensagem-status.sucesso {
+    display: block;
+    color: #285c36;
+    background-color: #dcefe0;
+    border: 1px solid #a6c9ad;
+}
+
+.mensagem-status.erro {
+    display: block;
+    color: #804444;
+    background-color: #f5e2e2;
+    border: 1px solid #d8aaaa;
+}
+
+.rodape-criador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 1px solid #c5d8c8;
+    color: #496e50;
+    font-size: 14px;
+}
+
+.foto-criadora {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 3px solid #496e50;
+    background-color: #dce9de;
+    color: #315b3b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 @media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
 
     .conteiner {
-        padding: 15px;
+        padding: 16px;
+        margin: 15px auto;
     }
 
     .resumo-conteiner {
         flex-direction: column;
-        gap: 15px;
-        align-items: flex-start;
+        align-items: stretch;
+    }
+
+    #total-estoque {
+        font-size: 16px;
     }
 
     table {
@@ -205,12 +254,12 @@ tbody tr:nth-child(even) {
 
     th,
     td {
-        padding: 6px;
+        padding: 7px;
     }
 
     .btn-editar,
     .btn-remover {
-        padding: 5px;
+        padding: 6px;
         font-size: 11px;
     }
 }

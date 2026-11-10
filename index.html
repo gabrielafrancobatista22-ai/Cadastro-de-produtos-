@@ -1,118 +1,69 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sistema de Estoque-Gabriela Franco</title>
-
+    <title>Sistema de Estoque - Gabriela Franco</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <div class="conteiner">
-
+    <main class="conteiner">
         <h1 id="texto-titulo">Cadastro de Produtos da Gabriela</h1>
 
-        <!-- Formulário de entrada -->
-        <form id="produto-form">
+        <div id="mensagem-status" class="mensagem-status" role="status" aria-live="polite"></div>
 
+        <form id="produto-form">
             <div class="form-group">
                 <label for="nome">Nome do produto:</label>
-                <input
-                    type="text"
-                    id="nome"
-                    placeholder="Ex. notebook"
-                    required
-                >
+                <input type="text" id="nome" placeholder="Ex. notebook">
             </div>
 
             <div class="form-group">
                 <label for="preco">Preço (R$):</label>
-                <input
-                    type="number"
-                    id="preco"
-                    step="0.01"
-                    min="0.01"
-                    placeholder="Ex. 3500,00"
-                    required
-                >
+                <input type="number" id="preco" step="0.01" min="0.01" placeholder="Ex. 3500,00">
             </div>
 
             <div class="form-group">
                 <label for="quantidade">Quantidade:</label>
-                <input
-                    type="number"
-                    id="quantidade"
-                    min="1"
-                    step="1"
-                    placeholder="Ex. 5"
-                    required
-                >
+                <input type="number" id="quantidade" min="1" step="1" placeholder="Ex. 5">
             </div>
 
-            <button type="submit" class="btn-primary">
-                Adicionar produto
-            </button>
-
+            <button type="submit" class="btn-primary">Adicionar produto</button>
         </form>
 
-        <!-- Resumo do estoque -->
         <div class="resumo-conteiner">
-
-            <h3 id="total-estoque">
-                Total em estoque: R$ 0,00
-            </h3>
-
-            <button id="limpar-tabela" class="btn-danger">
-                Limpar tudo
-            </button>
-
+            <h3 id="total-estoque">Total em estoque: R$ 0,00</h3>
+            <button type="button" id="limpar-tabela" class="btn-danger">Limpar tudo</button>
         </div>
 
-        <!-- Campo de pesquisa V4 -->
         <div class="form-group campo-busca">
-
-            <label for="campo-busca">
-                Pesquisar produto:
-            </label>
-
-            <input
-                type="text"
-                id="campo-busca"
-                placeholder="Digite o nome do produto..."
-            >
-
+            <label for="campo-busca">Pesquisar produto:</label>
+            <input type="text" id="campo-busca" placeholder="Digite o nome do produto...">
         </div>
 
-        <!-- Tabela de produtos -->
-        <table id="tabela-produtos">
+        <div class="tabela-responsiva">
+            <table id="tabela-produtos">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Preço-Un</th>
+                        <th>Quant.</th>
+                        <th>Sub-total</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
 
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Preço-Un</th>
-                    <th>Quant.</th>
-                    <th>Sub-total</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <!-- Produtos inseridos pelo JavaScript -->
-            </tbody>
-
-            <tfoot>
-            </tfoot>
-
-        </table>
-
-    </div>
+        <footer class="rodape-criador">
+            <img src="MINHA-FOTO.webp" alt="Foto da Gabriela" class="foto-criadora">
+            <span>criado por: <strong>Gabriela Franco</strong></span>
+        </footer>
+    </main>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
